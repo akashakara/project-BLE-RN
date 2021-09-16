@@ -15,9 +15,6 @@ import { theme } from '../theme';
 
 const manager = new BleManager();
 
-// Reducer to add only the devices which have not been added yet
-// When the bleManager search for devices, each time it detect a ble device, it returns the ble device even if this one has already been returned
-const reducer = (
   state: Device[],
   action: { type: 'ADD_DEVICE'; payload: Device } | { type: 'CLEAR' },
 ): Device[] => {
